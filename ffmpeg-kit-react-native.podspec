@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
 
-  s.subspec 'ffmpeg_kit_ios_local' do |ss|
+  s.subspec 'ffmpeg_kit_ios_https' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     ss.vendored_frameworks  = 'Frameworks/ffmpeg-kit-ios-https/*.xcframework'
