@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/arthenica/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
 
-  s.default_subspec   = 'ffmpeg_kit_ios_local'
+  s.default_subspec   = 'ffmpeg_kit_ios_https'
 
   s.dependency "React-Core"
 
