@@ -80,6 +80,9 @@ RCT_EXPORT_MODULE(FFmpegKitReactNativeModule);
         statisticsEnabled = false;
         asyncDispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
+        // 修改
+        self.eventEmitter = [[RCTEventEmitter alloc] initWithBridge:self.bridge];
+
         [self registerGlobalCallbacks];
     }
 
