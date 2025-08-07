@@ -16,9 +16,16 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/arthenica/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
 
-  s.default_subspec   = 'https'
+  s.default_subspec   = 'ffmpeg_kit_ios_local'
 
   s.dependency "React-Core"
+
+  s.subspec 'ffmpeg_kit_ios_local' do |ss|
+    ss.source_files         = 'Classes/**/*'
+    ss.public_header_files  = 'Classes/**/*.h'
+    ss.vendored_frameworks  = 'Frameworks/ffmpeg-kit-ios-https/*.xcframework'
+    ss.ios.deployment_target = '12.1'
+  end
 
   s.subspec 'min' do |ss|
       ss.source_files      = '**/FFmpegKitReactNativeModule.m',
